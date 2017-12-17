@@ -21,8 +21,5 @@
     "float"
     "listings"
     "xcolor"
-    "hyperref")
-   (LaTeX-add-labels
-    "eq:sist1"
-    "eq:sist2")))
+    "hyperref")))
 
