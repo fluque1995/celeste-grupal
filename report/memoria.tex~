@@ -1,0 +1,96 @@
+\documentclass[12pt]{article} \usepackage[utf8x]{inputenc}
+\usepackage{graphicx} \usepackage{multirow} \usepackage{hhline}
+\usepackage{booktabs} \usepackage{vmargin} %cambia el margen
+\usepackage{amsmath,amsthm} \usepackage{amsfonts} \usepackage{float}
+\usepackage{listings}
+
+
+\usepackage[hidelinks]{hyperref}
+
+
+
+
+\title{
+  Historia de las Matemáticas\\
+  \large Historia de los algoritmos inspirados en la evolución:
+  Algoritmos Genéticos, Programación Evolutiva, Estrategias de
+  Evolución y Programación Genética.  }
+
+
+\author{ 
+  Francisco Luque Sánchez \\
+  Ignacio Mas Mesa \\
+  Miguel Morales Castillo \\
+  María del Mar Ruiz Martín \\
+}
+
+
+
+\begin{document}
+\maketitle
+\begin{center}  
+\includegraphics[scale=0.35]{escudo.png}
+\end{center}
+
+\newpage
+
+\tableofcontents % para generar el índice de contenidos
+
+\pagebreak
+
+\section{Introducción}
+
+Las metaheurísticas son una clase de estrategias de resolución de
+problemas que aparecieron en los años 50. Este tipo de algoritmos se
+inspiran en procesos naturales, físicos o sociales para intentar
+resolver problemas, usualmente de optimización, cuando el espacio de
+soluciones es demasiado amplio para ser estudiado por métodos
+tradicionales.\\
+
+En este trabajo abordaremos, desde una perspectiva histórica, el
+origen, evolución y estado actual de este tipo de técnicas, así como
+ejemplos prácticos de aplicación. En particular, incidiremos sobre una
+clase importante de metaheurísticas, las cuales se inspiran en el
+proceso natural de la evolución. Dentro de este grupo se engloban
+cuatro enfoques principales, que son los algoritmos genéticos, la
+programación evolutiva, la programación genética y las estatregias
+de evolución.\\
+
+\section{Metaheurísticas}
+
+Las metaheurísticas aparecieron en los años 50 como respuesta a los
+problemas de optimización. Hasta ese momento, los ordenadores habían
+sido utilizados como herramientas de ayuda al cálculo, pero no se
+habían pensado como máquinas capaces de resolver problemas más
+complejos (needs further research). Cuando se intentaron implementar
+técnicas de optimización clásica para resolver problemas de búsqueda
+(derivación de funciones para el cálculo de extremos locales), se
+observó que para muchos problemas este enfoque no era suficiente
+(citation needed). Uno de los problemas que surgió fue que las
+funciones a optimizar tenían muchos extremos locales, infinitos en
+algunos casos. También se encontraron problemas en los que las
+funciones a optimizar no eran derivables, por lo que el enfoque
+clásico no podía
+ser aplicado.\\
+
+Empezaron a aparecer entonces intentos de resolución de problemas de
+este tipo con estrategias distintas. El primer ejemplo de este tipo de
+estrategias vino en 1951, con un método de aproximación estocástica.
+Este método, creado por Herbert Robins y Sutton Monro, trataba de
+encontrar extremos de una función utilizando un método de aproximación
+por pasos que depende de una variable aleatoria. Así se puede buscar
+el mínimo de una función sin tener que buscar la derivada de la misma.\\
+
+\section{Algoritmos genéticos}
+
+\section{Programación evolutiva}
+
+\section{Estrategias de evolución}
+
+\section{Programación genética}
+
+\section{Referencias}
+
+\end{document}
+
+

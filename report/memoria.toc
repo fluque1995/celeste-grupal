@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}{section.1}
+\contentsline {section}{\numberline {2}C\IeC {\'a}lculos realizados}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Posici\IeC {\'o}n de planeta}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Distancia al Sol}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Velocidad del planeta}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}M\IeC {\'o}dulo de la velocidad}{4}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Anomal\IeC {\'\i }a real}{5}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Energ\IeC {\'\i }a del planeta}{5}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Momento angular del planeta}{6}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}Anomal\IeC {\'\i }a real en funci\IeC {\'o}n de la anomal\IeC {\'\i }a exc\IeC {\'e}ntrica}{7}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.9}Anomal\IeC {\'\i }a exc\IeC {\'e}ntrica con funciones de Bessel}{8}{subsection.2.9}
+\contentsline {section}{\numberline {3}Aspectos de implementaci\IeC {\'o}n y ejecuci\IeC {\'o}n de la pr\IeC {\'a}ctica}{8}{section.3}
