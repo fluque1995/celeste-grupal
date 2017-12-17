@@ -580,3 +580,64 @@ class Displayer:
         data = [orbit, planet_pos, sun]
         fig = go.Figure(data=data, layout=layout)
         py.iplot(fig, filename='plots/orbit_plot')
+
+    def print_2bodies_solution(self, planet, time):
+        static_pos = planet.position_2d(time)
+        pos = planet.get_positions_2bodies(time)
+        print("Posición de {} en el día {} sin tomar el problema de los dos cuerpos: {}"
+              .format(planet, time, static_pos))
+        print("Posición de {} en el día {} resolviendo el problema de los dos cuerpos: {}"
+              .format(planet, time, pos[0]))
+
+        print("Posición del Sol en el día {}: {}".format(time, pos[1]))
+
+    def print_2bodies_orbit(self, planet, time):
+        xs = planet.get_orbit_2d(200)
+        xs_2bodies = planet.get_orbit_2bodies(200)
+
+        orbit = go.Scattergl(x=xs[:, 0], y=xs[:, 1], name='órbita')
+
+        orbit_2b = go.Scattergl(x=xs_2bodies[:, 0], y=xs_2bodies[:, 1],
+                                name='órbita en el problema de los dos cuerpos')
+    
+        position = planet.position_2d(time)
+    
+        planet_pos = go.Scattergl(x=[position[0]], y=[position[1]],
+                                  mode='markers',
+                                  marker=dict(
+                                      size=15,
+                                      color='rgba(152, 0, 0, .8)',
+                                      line=dict(
+                                          width=2,
+                                          color='rgb(0, 0, 0)'
+                                      )
+                                  ),
+                                  name='{}: día {}'
+                                  .format(planet.name, time))
+
+        sun = go.Scattergl(x=[0], y=[0],
+                           mode='markers',
+                           marker=dict(
+                                   size=20,
+                                   color='rgba(230, 230, 0, .9)',
+                                   line=dict(width=1, color='rgb(100,100,0)')
+                           ),
+                           name='Sol')
+
+        rng = int(1.2*planet.a) + 1
+
+        layout = go.Layout(
+            width=700, height=500,
+            xaxis=dict(
+                anchor='y',
+                range=[-rng, rng]
+            ),
+            yaxis=dict(
+                anchor='x',
+                autorange=False,
+                range=[-rng, rng],
+            )
+        )
+        data = [orbit, orbit_2b, planet_pos, sun]
+        fig = go.Figure(data=data, layout=layout)
+        py.iplot(fig, filename='plots/orbit_plot')
