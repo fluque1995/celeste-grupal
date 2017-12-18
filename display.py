@@ -597,7 +597,7 @@ class Displayer:
 
         orbit = go.Scattergl(x=xs[:, 0], y=xs[:, 1], name='órbita')
 
-        orbit_2b = go.Scattergl(x=xs_2bodies[:, 0], y=xs_2bodies[:, 1],
+        orbit_2b = go.Scattergl(x=xs_2bodies[:, 1], y=xs_2bodies[:, 0],
                                 name='órbita en el problema de los dos cuerpos')
     
         position = planet.position_2d(time)

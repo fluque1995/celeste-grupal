@@ -127,6 +127,30 @@ class Planet:
 
         return speed
 
+    def speed_2bodies(self, time):
+        G = 6.674*10**(-11)
+        sun_mass = 1.989*10**30
+        mu = 8.9546188*10**(-25)*G*sun_mass**3/(self.mass + sun_mass)**2
+        period = np.sqrt(4*np.pi**2*self.a**3/mu)
+
+        time = self.get_time_in_period(time)
+        eccentric_annomaly = utils.eccentric_annomaly(
+            period,
+            self.epsilon,
+            time
+        )
+
+        denom = period*(1-self.epsilon*np.cos(eccentric_annomaly))
+        quotient = 2*np.pi*self.a/denom
+
+        speed = [
+            (-quotient*np.sin(eccentric_annomaly))[0],
+            (quotient *
+             np.sqrt(1 - self.epsilon**2)*np.cos(eccentric_annomaly))[0]
+        ]
+
+        return speed
+
     def speed_module(self, time):
         return np.linalg.norm(self.speed(time))
 
@@ -210,8 +234,8 @@ class Planet:
     def mass_center(self, time):
         sun_mass = 1.989*10**30
         quotient = self.mass/(self.mass + sun_mass)
-        pos = np.array(self.position_2d(0))
-        speed = np.array(self.speed_2d(0))
+        pos = np.array(self.position_2bodies(0))
+        speed = np.array(self.speed_2bodies(0))
         alpha = quotient*pos
         beta = quotient*speed
         return alpha + beta*time
@@ -221,7 +245,7 @@ class Planet:
         sun_pos = np.array([0, 0])
         mass_center = self.mass_center(time)
         return np.array([planet_pos + mass_center,
-                         sun_pos - mass_center])
+                         sun_pos + mass_center])
 
     def eccentric_annomaly(self, time):
         time = self.get_time_in_period(time)
